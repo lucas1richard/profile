@@ -1,3 +1,3 @@
 # Richard Lucas Profile
 
-This page will showcase my portfolio
+This page will showcase my resume and portfolio
