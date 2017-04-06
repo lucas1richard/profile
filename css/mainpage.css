@@ -14,3 +14,26 @@ footer {
 	border-left: 1px solid black;
 	border-right: 1px solid black;
 }
+
+.advanced {
+  color: #336600;
+  border: 1px solid #336600;
+  background-color: #d9ffb3;
+}
+
+.intermediate {
+  color: #996600;
+  border: 1px solid #996600;
+  background-color: #ffeecc;
+}
+
+.skills * {
+  margin-top: 6px;
+  padding: 3px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.skills {
+  margin-top: -6px;
+}
