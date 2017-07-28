@@ -28054,25 +28054,51 @@ var MainNav = function MainNav() {
     { className: 'navbar navbar-default navbar-fixed-top', style: { zIndex: '100' } },
     _react2.default.createElement(
       'div',
-      { className: 'navbar-header' },
-      _react2.default.createElement('img', { src: 'img/richard.jpg', style: { height: '50px' } })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'navbar-header' },
+      { className: 'container-fluid' },
       _react2.default.createElement(
-        'a',
-        { className: 'navbar-brand' },
-        'Richard Lucas'
-      )
-    ),
-    _react2.default.createElement(
-      'ul',
-      { className: 'nav navbar-nav' },
+        'div',
+        { className: 'navbar-header' },
+        _react2.default.createElement('img', { src: 'img/richard.jpg', style: { height: '50px' } })
+      ),
       _react2.default.createElement(
-        _LinkItem2.default,
-        { path: '/' },
-        'Resume'
+        'div',
+        { className: 'navbar-header' },
+        _react2.default.createElement(
+          'a',
+          { className: 'navbar-brand' },
+          'Richard Lucas'
+        )
+      ),
+      _react2.default.createElement(
+        'ul',
+        { className: 'nav navbar-nav' },
+        _react2.default.createElement(
+          _LinkItem2.default,
+          { path: '/' },
+          'Resume'
+        )
+      ),
+      _react2.default.createElement(
+        'ul',
+        { className: 'nav navbar-nav navbar-right' },
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'https://www.linkedin.com/in/richardlucaskym/', style: { height: '20px' } },
+            _react2.default.createElement('i', { className: 'fa fa-linkedin-square', style: { fontSize: '20px' } })
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'https://github.com/lucas1richard/profile', style: { paddingRight: '15px', height: '20px' } },
+            _react2.default.createElement('i', { className: 'fa fa-github', style: { fontSize: '20px' } })
+          )
+        )
       )
     )
   );
