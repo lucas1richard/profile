@@ -37,3 +37,16 @@ footer {
 .skills {
   margin-top: -6px;
 }
+
+.one-line-contact {
+  color: #000;
+  border: 1px solid #666666;
+  background-color: #e6e6e6;
+  padding: 3px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.panel-default .panel-heading {
+  background-color: #ddd;
+}
