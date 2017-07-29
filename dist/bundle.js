@@ -12483,6 +12483,10 @@ var _Main = __webpack_require__(242);
 
 var _Main2 = _interopRequireDefault(_Main);
 
+var _Projects = __webpack_require__(245);
+
+var _Projects2 = _interopRequireDefault(_Projects);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = _react2.default.createElement(
@@ -12491,7 +12495,8 @@ var app = _react2.default.createElement(
   _react2.default.createElement(
     _reactRouter.Route,
     { path: '/', component: _Main2.default },
-    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Resume2.default })
+    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Resume2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _Projects2.default })
   )
 );
 
@@ -28076,6 +28081,11 @@ var MainNav = function MainNav() {
           _LinkItem2.default,
           { path: '/' },
           'Resume'
+        ),
+        _react2.default.createElement(
+          _LinkItem2.default,
+          { path: '/projects' },
+          'Projects'
         )
       ),
       _react2.default.createElement(
@@ -28157,6 +28167,220 @@ var LinkItem = function LinkItem(_ref) {
 };
 
 exports.default = LinkItem;
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Project = __webpack_require__(246);
+
+var _Project2 = _interopRequireDefault(_Project);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var projects = [{
+  name: 'War Game',
+  url: 'rjlwargame.herokuapp.com',
+  img: 'war-action-cropped.png',
+  technologies: ['socket.io', 'HTML Canvas', 'NodeJS', 'ExpressJS', 'PostgreSQL', 'Sequelize', 'Heroku'],
+  summary: 'This is based on a game I used to play as a young student, where the board was drawn by hand and each player took \n    turns firing at each other\'s enemy pieces. In the original game, you would put your pencil on one of your pieces with your\n    finger at the top of the pencil, tilt it toward an enemy piece, and press down. If the shot hit an enemy piece, you\n    successfully destroyed it.'
+}, {
+  name: 'Airport Nautical Miles',
+  url: 'rjlnauticalmiles.herokuapp.com',
+  img: 'nautical-miles.png',
+  technologies: ['ReactJS', 'Redux', 'Google Location API', 'NodeJS', 'ExpressJS', 'Bootstrap', 'PostgreSQL', 'Sequelize', 'Heroku'],
+  summary: 'This is a coding challenge which took approximately one day to complete.\n    Create a web app that calculates the distance (in nautical miles) between two airports. The app should autocomplete the\n    airports and should feature all airports in the U.S. only. Bonus: plot the trip on Google maps. If you are using npm,\n    please do not include your node_modules folder and make sure that all your requirements are in package.json.'
+}, {
+  name: 'C&S Connect Overlay',
+  img: 'csconnect-overlay.png',
+  url: 'https://github.com/lucas1richard/CS-Connect-Overlay',
+  technologies: ['Google Chrome extension', 'Bootstrap', 'chrome storage', 'Angular 1.5'],
+  summary: 'Google Chrome extension to improve the online tool C&S Connect used by ASME staff. It streamlines common tasks\n    making them take only a fraction of the time they require without the extension. There is an options page which uses AngularJS\n    to set defaults for the overlay and quickly create reports normally created manually by staff.'
+}, {
+  name: 'Know Your Macros',
+  img: 'kym.png',
+  url: 'knowyourmacros.io',
+  technologies: ['Fitbit API', 'PassportJS', 'OAuth', 'Bootstrap', 'NodeJS', 'ExpressJS', 'ReactJS', 'React-Router', 'Redux', 'PostgreSQL', 'Sequelize', 'AWS'],
+  summary: 'Online diet planner with emphasis on macronutrient calculations to allow users to correctly time their protein,\n    carbohydrate, and fat intake. It uses an iterative method to determine the correct quantities of foods to reach macronutrient\n    goals within 0.1 gram. The Fitbit API is used to compare the overall calories burned throughout the day to the calories\n    consumed by the user. The database contains almost 9000 foods, taken from the USDA food database as well as manual entry.'
+}];
+
+var Projects = function (_React$Component) {
+  _inherits(Projects, _React$Component);
+
+  function Projects() {
+    _classCallCheck(this, Projects);
+
+    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+
+    _this.state = {
+      initial: projects,
+      filtered: projects,
+      filter: ''
+    };
+
+    _this.updateFilter = _this.updateFilter.bind(_this);
+    _this.updateFilteredState = _this.updateFilteredState.bind(_this);
+    return _this;
+  }
+
+  _createClass(Projects, [{
+    key: 'updateFilteredState',
+    value: function updateFilteredState() {
+      var filter = this.state.filter.toLowerCase();
+      var filtered = this.state.initial.filter(function (project) {
+        var technology = project.technologies.filter(function (tech) {
+          return tech.toLowerCase().indexOf(filter) > -1;
+        }).length > 0;
+        var name = project.name.toLowerCase().indexOf(filter) > -1;
+        var summary = project.summary.toLowerCase().indexOf(filter) > -1;
+        return technology || name || summary;
+      });
+
+      this.setState({ filtered: filtered });
+    }
+  }, {
+    key: 'updateFilter',
+    value: function updateFilter(ev) {
+      this.setState({ filter: ev.target.value }, this.updateFilteredState);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var filtered = this.state.filtered;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'container' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Projects'
+        ),
+        _react2.default.createElement('input', {
+          type: 'text',
+          className: 'form-control',
+          placeholder: 'Filter',
+          value: this.state.filter,
+          onChange: this.updateFilter
+        }),
+        _react2.default.createElement('hr', null),
+        filtered.map(function (project, ix) {
+          return _react2.default.createElement(
+            'div',
+            { key: project.name },
+            _react2.default.createElement(_Project2.default, {
+              project: project
+            }),
+            ix < filtered.length - 1 && _react2.default.createElement('hr', null)
+          );
+        })
+      );
+    }
+  }]);
+
+  return Projects;
+}(_react2.default.Component);
+
+exports.default = Projects;
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Project = function Project(_ref) {
+  var project = _ref.project;
+
+  if (project.url.slice(0, 7) !== 'http://' && project.url.slice(0, 8) !== 'https://') {
+    project.url = 'http://' + project.url;
+  }
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'row' },
+      _react2.default.createElement(
+        'div',
+        { className: 'col-md-3' },
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('img', { src: 'img/' + project.img, alt: 'Project Image', className: 'image', style: { minHeight: '50px' } }),
+          _react2.default.createElement(
+            'a',
+            { href: project.url, target: '_blank', rel: 'noopener noreferrer' },
+            _react2.default.createElement(
+              'div',
+              { className: 'overlay' },
+              _react2.default.createElement(
+                'div',
+                { className: 'text' },
+                project.name
+              )
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'col-md-9' },
+        project.technologies.map(function (technology) {
+          return _react2.default.createElement(
+            'span',
+            { key: technology },
+            _react2.default.createElement(
+              'span',
+              { className: 'label label-default' },
+              technology
+            ),
+            ' '
+          );
+        }),
+        _react2.default.createElement(
+          'p',
+          null,
+          project.summary
+        )
+      )
+    )
+  );
+};
+
+exports.default = Project;
 
 /***/ })
 /******/ ]);
