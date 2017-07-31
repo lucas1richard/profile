@@ -8,26 +8,27 @@ const Project = ({project}) => {
   return (
     <div>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-4">
           <div>
             <img src={`img/${project.img}`} alt="Project Image" className="image" style={{minHeight: '50px'}} />
             <a href={project.url} target="_blank" rel="noopener noreferrer">
               <div className="overlay">
-                <div className="text">{project.name}</div>
+                <div className="text outline-text">{project.name}</div>
               </div>
             </a>
           </div>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-8">
           {project
             .technologies
+            .sort()
             .map(technology => (
               <span key={technology}>
                 <span className="label label-default">{technology}</span>
                 {' '}
               </span>
             ))}
-          <p>
+          <p style={{ marginTop: '15px' }}>
             {project.summary}
           </p>
         </div>

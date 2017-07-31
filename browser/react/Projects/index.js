@@ -72,6 +72,21 @@ const projects = [{
     carbohydrate, and fat intake. It uses an iterative method to determine the correct quantities of foods to reach macronutrient
     goals within 0.1 gram. The Fitbit API is used to compare the overall calories burned throughout the day to the calories
     consumed by the user. The database contains almost 9000 foods, taken from the USDA food database as well as manual entry.`
+  }, {
+    name: 'Grace Frames',
+    img: 'grace-frames.png',
+    url: 'rjlgraceframes.herokuapp.com',
+    technologies: [
+      'ReactJS',
+      'React-Router',
+      'Redux',
+      'PostreSQL',
+      'Sequelize',
+      'Heroku',
+      'Bootstrap',
+      'NodeJS'
+    ],
+    summary: ``
   }];
 
 class Projects extends React.Component {

@@ -435,6 +435,16 @@ module.exports = reactProdInvariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(21);
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -525,16 +535,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(21);
 
 
 /***/ }),
@@ -1349,7 +1349,7 @@ module.exports = ReactCurrentOwner;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var CallbackQueue = __webpack_require__(79);
 var PooledClass = __webpack_require__(20);
@@ -1605,7 +1605,7 @@ module.exports = ReactUpdates;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var PooledClass = __webpack_require__(20);
 
@@ -2091,7 +2091,7 @@ exports.createRouteFromReactElement = createRouteFromReactElement;
 exports.createRoutesFromReactChildren = createRoutesFromReactChildren;
 exports.createRoutes = createRoutes;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -2362,7 +2362,7 @@ var createPath = exports.createPath = function createPath(location) {
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(12);
 
@@ -2827,7 +2827,7 @@ module.exports = PooledClass;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var ReactBaseClasses = __webpack_require__(68);
 var ReactChildren = __webpack_require__(113);
@@ -4217,7 +4217,7 @@ exports.__esModule = true;
 exports.routes = exports.route = exports.components = exports.component = exports.history = undefined;
 exports.falsy = falsy;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var func = _react.PropTypes.func,
     object = _react.PropTypes.object,
@@ -5119,7 +5119,7 @@ module.exports = escapeTextContentForBrowser;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var EventPluginRegistry = __webpack_require__(35);
 var ReactEventEmitterMixin = __webpack_require__(163);
@@ -6981,7 +6981,7 @@ module.exports = ReactUpdateQueue;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var emptyFunction = __webpack_require__(11);
 var warning = __webpack_require__(2);
@@ -7406,7 +7406,7 @@ module.exports = getEventCharCode;
 exports.__esModule = true;
 exports.locationShape = exports.routerShape = undefined;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var func = _react.PropTypes.func,
     object = _react.PropTypes.object,
@@ -7541,7 +7541,7 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -7675,7 +7675,7 @@ exports.__esModule = true;
 exports.ContextProvider = ContextProvider;
 exports.ContextSubscriber = ContextSubscriber;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 // Works around issues with context updates failing to propagate.
 // Caveat: the context value is expected to never change its identity.
@@ -8136,7 +8136,7 @@ var go = exports.go = function go(n) {
 
 
 var _prodInvariant = __webpack_require__(22),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var ReactNoopUpdateQueue = __webpack_require__(69);
 
@@ -9804,7 +9804,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var LinkedValueUtils = __webpack_require__(52);
 var ReactDOMComponentTree = __webpack_require__(6);
@@ -10011,7 +10011,7 @@ module.exports = ReactDOMSelect;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var ReactCompositeComponent = __webpack_require__(170);
 var ReactEmptyComponent = __webpack_require__(92);
@@ -11770,7 +11770,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -11933,7 +11933,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -12465,7 +12465,7 @@ module.exports = exports['default'];
 "use strict";
 
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -12487,6 +12487,10 @@ var _Projects = __webpack_require__(245);
 
 var _Projects2 = _interopRequireDefault(_Projects);
 
+var _AboutMe = __webpack_require__(247);
+
+var _AboutMe2 = _interopRequireDefault(_AboutMe);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = _react2.default.createElement(
@@ -12496,7 +12500,8 @@ var app = _react2.default.createElement(
     _reactRouter.Route,
     { path: '/', component: _Main2.default },
     _react2.default.createElement(_reactRouter.IndexRoute, { component: _Resume2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _Projects2.default })
+    _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _Projects2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _AboutMe2.default })
   )
 );
 
@@ -14060,7 +14065,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var emptyObject = __webpack_require__(34);
 var _invariant = __webpack_require__(1);
@@ -15670,7 +15675,7 @@ module.exports = BeforeInputEventPlugin;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var PooledClass = __webpack_require__(20);
 
@@ -17704,7 +17709,7 @@ module.exports = ReactDOMIDOperations;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var AutoFocusUtils = __webpack_require__(154);
 var CSSPropertyOperations = __webpack_require__(155);
@@ -19426,7 +19431,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var DOMPropertyOperations = __webpack_require__(87);
 var LinkedValueUtils = __webpack_require__(52);
@@ -19718,7 +19723,7 @@ module.exports = ReactDOMInput;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var React = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(6);
@@ -19847,7 +19852,7 @@ module.exports = ReactDOMOption;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var LinkedValueUtils = __webpack_require__(52);
 var ReactDOMComponentTree = __webpack_require__(6);
@@ -20624,7 +20629,7 @@ module.exports = ReactChildReconciler;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var React = __webpack_require__(21);
 var ReactComponentEnvironment = __webpack_require__(53);
@@ -21832,7 +21837,7 @@ module.exports = flattenChildren;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var PooledClass = __webpack_require__(20);
 var Transaction = __webpack_require__(36);
@@ -22073,7 +22078,7 @@ module.exports = ReactServerUpdateQueue;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var DOMLazyTree = __webpack_require__(24);
 var ReactDOMComponentTree = __webpack_require__(6);
@@ -22281,7 +22286,7 @@ module.exports = {
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(4);
+    _assign = __webpack_require__(5);
 
 var DOMChildrenOperations = __webpack_require__(49);
 var DOMLazyTree = __webpack_require__(24);
@@ -22448,7 +22453,7 @@ module.exports = ReactDOMTextComponent;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var ReactUpdates = __webpack_require__(13);
 var Transaction = __webpack_require__(36);
@@ -22521,7 +22526,7 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var EventListener = __webpack_require__(95);
 var ExecutionEnvironment = __webpack_require__(7);
@@ -22764,7 +22769,7 @@ module.exports = ReactInjection;
 
 
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(5);
 
 var CallbackQueue = __webpack_require__(79);
 var PooledClass = __webpack_require__(20);
@@ -25139,7 +25144,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25537,7 +25542,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25592,7 +25597,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25631,7 +25636,7 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26549,7 +26554,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26589,7 +26594,7 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26717,7 +26722,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 exports.__esModule = true;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26788,7 +26793,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26856,7 +26861,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -26998,7 +27003,7 @@ module.exports = exports['default'];
 "use strict";
 
 var strictUriEncode = __webpack_require__(232);
-var objectAssign = __webpack_require__(4);
+var objectAssign = __webpack_require__(5);
 
 function encoderForArrayFormat(opts) {
 	switch (opts.arrayFormat) {
@@ -27436,7 +27441,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -27986,7 +27991,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28043,7 +28048,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28081,6 +28086,11 @@ var MainNav = function MainNav() {
           _LinkItem2.default,
           { path: '/' },
           'Resume'
+        ),
+        _react2.default.createElement(
+          _LinkItem2.default,
+          { path: '/about' },
+          'About Me'
         ),
         _react2.default.createElement(
           _LinkItem2.default,
@@ -28127,7 +28137,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28181,7 +28191,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28221,6 +28231,12 @@ var projects = [{
   url: 'knowyourmacros.io',
   technologies: ['Fitbit API', 'PassportJS', 'OAuth', 'Bootstrap', 'NodeJS', 'ExpressJS', 'ReactJS', 'React-Router', 'Redux', 'PostgreSQL', 'Sequelize', 'AWS'],
   summary: 'Online diet planner with emphasis on macronutrient calculations to allow users to correctly time their protein,\n    carbohydrate, and fat intake. It uses an iterative method to determine the correct quantities of foods to reach macronutrient\n    goals within 0.1 gram. The Fitbit API is used to compare the overall calories burned throughout the day to the calories\n    consumed by the user. The database contains almost 9000 foods, taken from the USDA food database as well as manual entry.'
+}, {
+  name: 'Grace Frames',
+  img: 'grace-frames.png',
+  url: 'rjlgraceframes.herokuapp.com',
+  technologies: ['ReactJS', 'React-Router', 'Redux', 'PostreSQL', 'Sequelize', 'Heroku', 'Bootstrap', 'NodeJS'],
+  summary: ''
 }];
 
 var Projects = function (_React$Component) {
@@ -28314,7 +28330,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(5);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -28335,7 +28351,7 @@ var Project = function Project(_ref) {
       { className: 'row' },
       _react2.default.createElement(
         'div',
-        { className: 'col-md-3' },
+        { className: 'col-md-4' },
         _react2.default.createElement(
           'div',
           null,
@@ -28348,7 +28364,7 @@ var Project = function Project(_ref) {
               { className: 'overlay' },
               _react2.default.createElement(
                 'div',
-                { className: 'text' },
+                { className: 'text outline-text' },
                 project.name
               )
             )
@@ -28357,8 +28373,8 @@ var Project = function Project(_ref) {
       ),
       _react2.default.createElement(
         'div',
-        { className: 'col-md-9' },
-        project.technologies.map(function (technology) {
+        { className: 'col-md-8' },
+        project.technologies.sort().map(function (technology) {
           return _react2.default.createElement(
             'span',
             { key: technology },
@@ -28372,7 +28388,7 @@ var Project = function Project(_ref) {
         }),
         _react2.default.createElement(
           'p',
-          null,
+          { style: { marginTop: '15px' } },
           project.summary
         )
       )
@@ -28381,6 +28397,104 @@ var Project = function Project(_ref) {
 };
 
 exports.default = Project;
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Section = __webpack_require__(248);
+
+var _Section2 = _interopRequireDefault(_Section);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var sections = [{
+  title: 'First programming language',
+  paras: ['I had my first real experience with a modern programming language during college\n    when I had an internship at the U.S. Army Research Laboratory. There was a three\n    month period during which I had to learn about a formulation of continuum\n    mechanics called peridynamics, some graduate level mathematics, and C\n    programming.', 'During the semester prior to the internship, there was a project in heat\n    transfer which required students to write a program. Since I hadn\'t learned C\n    yet, I completed the assignment in MathCAD. After completing the internship, I\n    redid the assignment in C, and was very happy with the reduced solution that it\n    enabled.', 'Initially after moving to New York, I struggled with the noise level; extremely\n    loud music from cars bothered me and made me unable to sleep well at night.\n    After some experimentation in Excel, I used C to write a simulation of a\n    microphone array which could pinpoint offending noise polluters.']
+}, {
+  title: 'Visual Basic for Applications',
+  paras: ['I started working at the American Society of Mechanical Engineers (ASME) shortly\n    after moving to New York. There were documents that required continuous\n    maintenance and summarizations. I realized that I could write a program to create\n    the summaries based on the document layout, so that\'s what I did using Visual\n    Basicfor Applications.', 'New York can be a rough place sometimes and, when my neighbor started harrassing\n    me, I became interested in fitness as a way to cope. This interest in fitness lead\n    to an interest in nutrition. Being an engineer, I like numbers, so I started tracking and\n    analyzing my diet in regards to macronutrients, but it was hard to get exactly the\n    right combinations. I solved this problem by creating a VBA tool in Excel to determine the\n    exact quatities of foods to eat to reach macronutrient goals.']
+}, {
+  title: 'PHP, MySQL, and vanilla JavaScript',
+  paras: []
+}];
+
+var AboutMe = function AboutMe() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'container' },
+    _react2.default.createElement(
+      'h3',
+      null,
+      'My Background'
+    ),
+    _react2.default.createElement('hr', null),
+    ' ',
+    sections.map(function (section, ix) {
+      return _react2.default.createElement(
+        'div',
+        { key: section.title },
+        _react2.default.createElement(_Section2.default, { title: section.title, paras: section.paras }),
+        ' ',
+        ix < sections.length - 1 ? _react2.default.createElement('hr', null) : ''
+      );
+    })
+  );
+};
+
+exports.default = AboutMe;
+
+/***/ }),
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Section = function Section(_ref) {
+  var title = _ref.title,
+      paras = _ref.paras;
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h4',
+      null,
+      title
+    ),
+    paras.map(function (para) {
+      return _react2.default.createElement(
+        'p',
+        { key: para },
+        para
+      );
+    })
+  );
+};
+
+exports.default = Section;
 
 /***/ })
 /******/ ]);

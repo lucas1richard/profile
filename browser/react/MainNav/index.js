@@ -13,6 +13,7 @@ const MainNav = () => {
         </div>
         <ul className="nav navbar-nav">
           <LinkItem path="/">Resume</LinkItem>
+          <LinkItem path="/about">About Me</LinkItem>
           <LinkItem path="/projects">Projects</LinkItem>
         </ul>
 
