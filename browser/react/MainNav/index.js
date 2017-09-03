@@ -1,38 +1,33 @@
 import React from 'react';
 import LinkItem from './LinkItem';
+import Nav from '../Styled/Nav';
 
-const MainNav = () => {
-  return (
-    <nav className="navbar navbar-default navbar-fixed-top" style={{zIndex: '100'}}>
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <img src="img/richard.jpg" style={{height: '50px'}} />
-        </div>
-        <div className="navbar-header">
-          <a className="navbar-brand">Richard Lucas</a>
-        </div>
-        <ul className="nav navbar-nav">
-          <LinkItem path="/">Resume</LinkItem>
-          <LinkItem path="/about">About Me</LinkItem>
-          <LinkItem path="/projects">Projects</LinkItem>
-        </ul>
+class MainNav extends React.Component {
 
-        {/* Media Links */}
-        <ul className="nav navbar-nav navbar-right">
-          <li>
-            <a href="https://www.linkedin.com/in/richardlucaskym/" style={{height: '20px'}}>
-              <i className="fa fa-linkedin-square" style={{fontSize: '20px'}} />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/lucas1richard/profile" style={{paddingRight: '15px', height: '20px'}}>
-              <i className="fa fa-github" style={{fontSize: '20px'}} />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
-};
+  constructor() {
+    super();
+    this.state = {
+      extended: false
+    };
+
+    this.updateExtended = this.updateExtended.bind(this);
+  }
+
+  updateExtended() {
+    this.setState({extended: !this.state.extended});
+  }
+
+  render() {
+    return (
+      <Nav className={this.state.extended ? 'responsive' : null} primary>
+        <a>Richard Lucas Portfolio</a>
+        <LinkItem path="/">Resume</LinkItem>
+        <LinkItem path="/about">About Me</LinkItem>
+        <LinkItem path="/projects">Projects</LinkItem>
+        <a className="icon" onClick={this.updateExtended}>&#9776;</a>
+      </Nav>
+    );
+  }
+}
 
 export default MainNav;

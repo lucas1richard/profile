@@ -1,4 +1,5 @@
 import React from 'react';
+import Label from '../Styled/Label';
 
 const Project = ({project}) => {
   if (project.url.slice(0, 7) !== 'http://' && project.url.slice(0, 8) !== 'https://') {
@@ -23,9 +24,8 @@ const Project = ({project}) => {
             .technologies
             .sort()
             .map(technology => (
-              <span key={technology}>
-                <span className="label label-default">{technology}</span>
-                {' '}
+              <span key={technology} style={{display: 'inline-block', lineHeight: '1.8em', marginRight: '0.2em'}}>
+                <Label primary>{technology}</Label>
               </span>
             ))}
           <p style={{ marginTop: '15px' }}>

@@ -14,16 +14,12 @@ const LinkItem = ({path, children}) => {
     return null;
   }
 
-  const isActive = hashHistory
-    .getCurrentLocation()
-    .pathname === path;
+  const isActive = hashHistory.getCurrentLocation().pathname === path;
 
   return (
-    <li className={isActive ? 'active' : ''}>
-      <Link to={path}>
-        {children}
-      </Link>
-    </li>
+    <Link className={isActive ? 'active' : null} to={path}>
+      {children}
+    </Link>
   );
 };
 
